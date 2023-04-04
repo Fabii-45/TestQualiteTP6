@@ -1,0 +1,29 @@
+= Test Web service sans authentification
+
+
+
+Le but est de tester *structurellement* le contrôleur REST.
+Pour ceci, vous devez vous inspirer du cours et de l'exemple fourni
+sur Célène.
+Evidemment, nous voulons seulement exécuter le code du contrôleur i.e.
+à aucun moment je ne veux exécuter le code de la façade (en particulier).
+
+
+
+
+Eléments clés :
+
+
+[source,java]
+----
+@MockBean
+Facade facade;
+
+@Autowired
+MockMVC mvc;
+
+
+mvc.perform(...).andExpect(...)
+
+
+----
